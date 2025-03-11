@@ -1,0 +1,104 @@
+---
+title:  "DEVOIR_1_R_FACTORS"
+author: "Leslye Patricia NKWA"
+format: pdf
+editor: visual
+---
+
+# CONTEXTE
+
+Nous étudions l’impact des facteurs socio-économiques et de santé sur le niveau de stress des individus à Douala.
+
+## Variables choisies
+
+ID (facteur - identifiant unique)
+
+Âge (quantitative discrète - en années)
+
+Sexe (qualitative nominale - "Homme" ou "Femme")
+
+Revenu mensuel (quantitative continue - en FCFA)
+
+Niveau d’éducation (qualitative ordinale - "Primaire", "Secondaire", "Supérieur")
+
+Nombre d’enfants (quantitative discrète)
+
+Heures de sommeil par nuit (quantitative continue)
+
+Pratique d’un sport (qualitative binaire - "Oui" ou "Non")
+
+Maladies chroniques (qualitative nominale - "Aucune", "Diabète", "Hypertension", etc.)
+
+Niveau de stress (score de 1 à 10) (quantitative ordinale)
+
+## Code
+
+```{r}
+# Fixons une graine pour rendre l'exemple reproductible
+
+set.seed(123)
+
+# (1) Facteur : Identifiant unique
+
+ID <- factor(1:100)  # Chaque individu a un ID unique
+
+# (2) Quantitative discrète : Âge en années 
+
+Age <- sample(18:70, 100, replace = TRUE)
+
+# (3) Qualitative nominale : Sexe (sans hiérarchie)
+
+Sexe_qualitative <- sample(c("Homme", "Femme"), 100, replace = TRUE)
+
+Sexe_qualitative
+
+Sexe <- factor(Sexe_qualitative,levels = c("Homme", "Femme"), ordered = TRUE )
+
+# (4) Quantitative continue : Revenu  (avec décimales)
+
+Revenu <- round(rnorm(100, mean = 2500, sd = 800), 2)
+
+# (5) Qualitative ordinale : Niveau d'éducation (Primaire < Secondaire < Supérieur)
+
+NiveauEducation <- factor(
+    sample(c("Primaire", "Secondaire", "Supérieur"), 100, replace = TRUE),
+    levels = c("Primaire", "Secondaire", "Supérieur"), 
+    ordered = TRUE
+)
+
+
+# (6) Quantitative discrète : Nombre d’enfants (valeurs entières)
+
+NbEnfants <- sample(0:5, 100, replace = TRUE)
+
+# (7) Quantitative continue : Heures de sommeil (mesurable en décimales)
+
+Sommeil <- round(runif(100, 4, 9), 1)
+
+# (8) Qualitative binaire ou nominale : Pratique du sport (Oui/Non)
+
+Sport <- factor(sample(c("Oui", "Non"), 100, replace = TRUE))
+
+# (9) Qualitative nominale : Maladies chroniques
+
+MaladiesChroniques <- factor(
+    sample(c("Aucune", "Diabète", "Hypertension", "Asthme"), 100, replace = TRUE))
+
+# (10) Quantitative ordinale : Niveau de stress (note de 1 à 10)
+Stress <- sample(1:10, 100, replace = TRUE)
+
+
+# Création du DataFrame
+df <- data.frame(ID, Age, Sexe_qualitative, Sexe, Revenu, NiveauEducation, NbEnfants, Sommeil, Sport, MaladiesChroniques, Stress)
+
+head(df)
+tail(df)
+
+#  Vérification des types de données
+str(df)
+
+# Understand sample with replace = false by default with || sample(x= 13:15, size= 2, replace = FALSE, prob = c(0.3, 0.4,0.3) ) get: [1] 14 15 
+```
+
+```         
+```
