@@ -1,0 +1,192 @@
+---
+title: "COURS_R_10_03"
+author: "Leslye"
+date: "09 mars 2025"
+format:
+  html:
+    toc: true
+---
+
+# COURS R 10/03/2025
+
+## 1) Les matrices
+
+```{r}
+
+# Creation d'un array de dimension 3 ( un cube de données )
+
+monarray<- array (1:24, dim= c(2,3,4))
+print (monarray)
+
+# 1ere matrice de monarray
+monarray[, , 1]
+
+# 2e colonne de toute les matrices
+monarray[, 2, ]
+
+#1ere ligne de toutes les matrices
+monarray[1, , ]
+
+
+```
+
+## 2) Exemple de cas avec les matrices : Etude de trois indicateurs dans les villes de dakar , nairobi et abidjan suivant les annees 2020 à 2023
+
+```{r}
+#  villes, indicateurs et années
+villes <- c("Dakar", "Abidjan", "Nairobi")
+indicateurs <- c("Population", "PIB", "Température")
+annees <- c("2020", "2021", "2022", "2023")
+
+# Création 
+donnees <- array(
+  c(  3500000,  20,  28,   # Dakar 2020
+      5000000,  30,  27,   # Abidjan 2020
+      4500000,  25,  24,   # Nairobi 2020
+
+      3600000,  22,  29,   # Dakar 2021
+      5100000,  32,  28,   # Abidjan 2021
+      4600000,  27,  25,   # Nairobi 2021
+
+      3700000,  23,  29,   # Dakar 2022
+      5200000,  33,  28,   # Abidjan 2022
+      4700000,  28,  26,   # Nairobi 2022
+
+      3800000,  25,  30,   # Dakar 2023
+      5300000,  35,  29,   # Abidjan 2023
+      4800000,  30,  27    # Nairobi 2023
+  ), 
+  dim = c(3, 3, 4), 
+  dimnames = list(villes, indicateurs, annees)
+)
+
+# Affichage des données
+print(donnees)
+
+#quelques croisement 
+donnees["Abidjan", "Population", ]
+donnees[, "Température", "2023"]
+donnees["Dakar", "PIB", ]
+donnees[,,"2021"]
+
+
+#Obtenir un dataframe 
+library(tidyr)
+library(dplyr)
+
+# Convertir l'array en data frame
+df_donnees <- as.data.frame(as.table(donnees))
+
+# Renommer les colonnes pour plus de clarté
+colnames(df_donnees) <- c("Ville", "Indicateur", "Année", "Valeur")
+
+# Afficher le dataframe
+print(df_donnees)
+
+
+```
+
+## 3) Manipuler un dataframe
+
+```{r}
+
+# Creation du dataframe
+mon_df <- data.frame(id = 1:3, nom = c("Alice", "Bob", "Charlie"), age = c(25, 30, 35), actif = c(TRUE, FALSE, TRUE))
+
+mon_df
+
+# Manipulons un dataframe 
+
+df <- data.frame(id = 1:5, valeur = c(10, 20, 30, 40, 50), groupe = c("A", "B", "A", "B", "A"))
+
+# Quelles données sont dans la série valeur?
+df$valeur
+
+#Quels individus sont dans le groupe A?
+df[df$groupe == "A", ]
+
+
+```
+
+```{r}
+
+# creer des Sequences de données 
+c1 <- seq(1, 10, by = 2)
+c2 <- seq(0, 1, length.out = 5)
+c3 <- rep(1:3, times = 2)
+
+c1
+c2
+c3
+print(paste(c1,c2,c3))
+
+#Des operations logiques 
+
+TRUE & FALSE  # ET logique
+TRUE | FALSE  # OU logique
+!TRUE  # NON logique
+c(TRUE, FALSE, TRUE) & c(TRUE, TRUE, FALSE)  # ET vectoriel
+```
+
+```{r}
+
+# ASSIGNATION 
+x <- 10
+y = 20
+30 -> z
+
+x
+y
+z
+
+
+```
+
+## 4) Le pipe natif vs le pipe du tidyverse
+
+```{r}
+
+#Le pipe natif est plus rapide et inclut dans R contrairement au tidypipe qui necessite son package.
+
+# %>% (tidyverse) et |> (pipe natif) permettent de chaîner des opérations.
+
+library(magrittr)
+mon_df$id %>% mean() %>% round(1)
+mon_df$age |> mean() |> round(1)
+```
+
+## 5) Des calculs statistiques
+
+```{r}
+# Valeur moyenne
+v_mean <-mean( df$id)
+
+# Valeur mediane
+v_median <- median(df$valeur)
+
+#ecart type des valeurs
+v_sd <- sd(df$valeur)
+
+# Descriptif des id, descriptif des données
+summary(df$id)
+summary(df)
+
+v_mean
+v_median
+v_sd
+```
+
+## 6) Charger et lire des fichiers sur R
+
+```{r}
+
+#Les données importées sont dans le dossier du projet
+data_csv <- read.csv("household_data.csv")
+
+library(readxl)
+data_excel <- read_excel("kawteef.xlsx")
+
+data_csv
+data_excel
+
+```
