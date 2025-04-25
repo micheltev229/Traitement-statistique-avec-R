@@ -78,7 +78,7 @@ inverser_matrice <- function(M)
 m <- matrix(c(1,3,4,9), nrow=2)
 inverser_matrice(m)
 
-#etude de cas : au primaire : aider l'enseignant a resoudre les 4 operations
+# etude de cas : au primaire : aider l'enseignant a resoudre les 4 operations
 calcul_prim <- function(a, b, operateur) 
 {
   ifelse(operateur == "+", return(a + b),
@@ -95,3 +95,10 @@ calcul_prim <- function(a, b, operateur)
 # test 
 calcul_prim(1,3,"+")
 
+# nombres comme pairs ou impairs
+parite <- function(a) 
+{
+  ifelse(a %% 2 == 0, "Pair", "Impair")
+}
+# test
+parite(64)
