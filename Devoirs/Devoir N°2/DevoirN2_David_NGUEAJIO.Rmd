@@ -1,0 +1,123 @@
+---
+title: "Devoir : Fonctions R avec boucles et structures de contrôle"
+author: "Ton Nom"
+date: "`r Sys.Date()`"
+output: 
+  html_document:
+    toc: true
+    toc_depth: 2
+    number_sections: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+1. Recherche de nombres premiers
+
+```{r}
+
+est_premier <- function(x) {
+  if (x <= 1) return(FALSE)
+  if (x == 2) return(TRUE)
+  for (i in 2:floor(sqrt(x))) {
+    if (x %% i == 0) return(FALSE)
+  }
+  return(TRUE)
+}
+
+nombres_premiers <- function(n) {
+  primes <- c()
+  for (i in 2:n) {
+    if (est_premier(i)) {
+      primes <- c(primes, i)
+    }
+  }
+  return(primes)
+}
+
+
+```
+
+# Exemple :
+
+
+```{r}
+nombres_premiers(30)
+```
+
+
+2. Résolution d’équation jusqu’au 3e degré
+
+```{r}
+resoudre_equation <- function(a, b, c = 0, d = 0) {
+  if (d != 0) {
+    coeffs <- c(a, b, c, d)
+  } else if (c != 0) {
+    coeffs <- c(a, b, c)
+  } else {
+    return(-b / a)
+  }
+  return(polyroot(coeffs))
+}
+
+```
+
+
+
+# Exemples :
+
+```{r}
+resoudre_equation(1, -6, 11, -6)  # x^3 - 6x^2 + 11x - 6 = 0
+resoudre_equation(1, -3, 2)       # x^2 - 3x + 2 = 0
+resoudre_equation(2, -8)          # 2x - 8 = 0
+
+```
+
+
+3. Inversion d’une matrice
+
+```{r}
+
+inverser_matrice <- function(mat) {
+  if (!is.matrix(mat)) stop("L'entrée doit être une matrice.")
+  if (nrow(mat) != ncol(mat)) stop("La matrice doit être carrée.")
+  if (det(mat) == 0) stop("La matrice n’est pas inversible.")
+  return(solve(mat))
+}
+
+```
+
+
+
+```{r}
+# Exemple :
+A <- matrix(c(4, 7, 2, 6), nrow = 2)
+inverser_matrice(A)
+
+```
+
+4. Résolution d’un système à n inconnues
+
+```{r}
+resoudre_systeme <- function(A, b) {
+  if (!is.matrix(A)) stop("A doit être une matrice.")
+  if (length(b) != nrow(A)) stop("Le vecteur b doit avoir autant d’éléments que de lignes de A.")
+  if (det(A) == 0) stop("Le système n’a pas de solution unique.")
+  return(solve(A, b))
+}
+
+```
+
+
+```{r}
+
+# Exemple :
+A <- matrix(c(2, 1, -1,
+              -3, -1, 2,
+              -2, 1, 2), nrow = 3, byrow = TRUE)
+b <- c(8, -11, -3)
+resoudre_systeme(A, b)
+
+
+```
