@@ -1,0 +1,79 @@
+---
+title: "03_CV"
+author: "Marème DIOP"
+date: "2025-05-03"
+output: word_document
+---
+
+
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
+library(vitae)
+library(tibble)
+```
+
+# Formation
+
+```{r education}
+tibble::tribble(
+  ~degree, ~startYear, ~endYear, ~institution, ~where,
+  "Master en Data Science", "2020", "2022", "ENSAE", "Dakar",
+  "Licence en Mathématiques", "2017", "2020", "Université Cheikh Anta DIOP", "Dakar"
+) %>% 
+  detailed_entries(
+    what = degree,
+    when = glue::glue("{startYear} - {endYear}"),
+    with = institution,
+    where = where
+  )
+```
+
+# Expérience professionnelle
+
+```{r experience}
+tibble::tribble(
+  ~title, ~startYear, ~endYear, ~company, ~where, ~description,
+  "Data Scientist", "2022", "Présent", "ANSD", "Paris", "Analyse de données, développement de modèles prédictifs, visualisation de données",
+  "Stagiaire Analyste", "2021", "2021", "ANNEXE ANSD", "Lyon", "Collecte et analyse de données, reporting"
+) %>% 
+  detailed_entries(
+    what = title,
+    when = glue::glue("{startYear} - {endYear}"),
+    with = company,
+    where = where,
+    why = description
+  )
+```
+
+# Compétences
+
+```{r skills}
+tribble(
+  ~category, ~skills,
+  "Programmation", "R, Python, SQL, SAS",
+  "Data Visualization", "ggplot2, Tableau, D3.js",
+  "Machine Learning", "Régression, Classification, Clustering",
+  "Outils", "Git, Docker, AWS, RStudio"
+) %>% 
+  detailed_entries(
+    what = category,
+    why = skills
+  )
+```
+
+# Langues
+
+```{r languages}
+tribble(
+  ~language, ~level,
+  "Français", "Langue maternelle",
+  "Anglais", "Courant (TOEIC 900)",
+  "Espagnol", "Intermédiaire"
+) %>% 
+  detailed_entries(
+    what = language,
+    why = level
+  )
+```

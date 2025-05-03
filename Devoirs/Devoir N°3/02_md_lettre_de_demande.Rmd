@@ -1,0 +1,68 @@
+---
+title: "CV"
+author: "Marème DIOP"
+date: "2025-05-03"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+\begin{flushright}
+Marie DIOP\\
+Maristes 1\\
+marie.diop@gmail.com\\
++221 77 000 07 09\\
+\end{flushright}
+
+\begin{flushleft}
+Entreprise ANSD\\
+Fann Bel Air\\
+Dakar-Sénégal\\
+\end{flushleft}
+
+\vspace{0.5cm}
+
+Dakar, le `r format(Sys.Date(), "%d %B %Y")`
+
+\vspace{0.5cm}
+
+**Objet :** Candidature au poste de Data Scientist
+
+\vspace{0.5cm}
+
+Madame, Monsieur,
+
+\vspace{0.3cm}
+
+Suite à votre annonce parue sur LinkedIn concernant le poste de Data Scientist au sein de votre entreprise, je me permets de vous adresser ma candidature.
+
+Titulaire d'un Master en Data Science de l'ENSAE de Dakar, j'ai acquis une solide formation.
+
+
+```
+{r experience-detail, include=FALSE}
+experience_years <- 3
+projets_realises <- 12
+```
+
+
+Avec `r experience_years` années d'expérience et `r projets_realises` projets réalisés dans le secteur, je suis particulièrement intéressé(e) par le poste que vous proposez car il correspond parfaitement à mon projet professionnel et à mes compétences.
+
+Je suis convaincu(e) que mon profil correspond aux qualifications requises pour ce poste, et je serais ravi(e) de pouvoir vous exposer plus en détail mes motivations lors d'un entretien.
+
+Je vous prie d'agréer, Madame, Monsieur, l'expression de mes salutations distinguées.
+
+\vspace{1cm}
+
+
+
+
+
+
+
+
+
+
+
