@@ -1,0 +1,61 @@
+---
+title: ""
+author: ""
+output: 
+  pdf_document:
+    latex_engine: xelatex
+    keep_tex: true
+fontsize: 12pt
+mainfont: "Times New Roman"
+geometry: margin=2.5cm
+---
+
+\noindent
+\begin{minipage}[t]{0.45\textwidth}
+Leslye Patricia NKWA TSAMO\\
+DAKAR – HLM Cité Douane\\
++221 778856566\\
+leslyenkwa@gmail.com
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.5\textwidth}
+\raggedleft
+\textbf{Fait à Dakar, le 06 Janvier 2025}
+
+\vspace{1cm}
+
+\textbf{UNICEF, Sénégal} \\
+\textbf{A l’attention du bureau de l’UNICEF à Dakar}
+\end{minipage}
+
+\vspace{1cm}
+
+\textbf{OBJET : CANDIDATURE POUR LE POSTE DE STAGIAIRE / ALTERNANT AU SEIN DE L’EQUIPE  
+REGIONALE DE GENRE POUR SOUTENIR ET CONTRIBUER AU PROGRAMME D’EGALITE DES  
+SEXES DE L’UNICEF EN AFRIQUE DE L’OUEST ET DU CENTRE.}
+
+\vspace{0.5cm}
+
+Madame, Monsieur,
+
+\vspace{0.3cm}
+
+Actuellement étudiante en deuxième année de formation Cycle Long à l’ENSAE de DAKAR, je me permets de prendre contact avec vous afin de vous soumettre ma candidature pour ce poste de stagiaire.
+
+\vspace{0.3cm}
+
+UNICEF est une organisation que j’admire profondément pour son engagement en faveur de l’enfance et de son action en faveur de l’égalité des genres. Je suis convaincue que ce stage me permettra d’acquérir une expérience professionnelle enrichissante et de contribuer pleinement à l’atteinte des objectifs de l’UNICEF dans la région.
+
+\vspace{0.3cm}
+
+Au cours de mon parcours académique, je développe de solides compétences en économie et en statistiques dont analyse de données, communication, travail en équipe. J’ai également eu l’occasion de réaliser des projets, mener des recherches et analyse exploratoire, travailler dans des contextes multiculturels grâce à cet atout qu’a notre école nationale qui m’ont permis de développer un sens aigu des responsabilités et une grande capacité d’adaptation.
+
+Je suis également parmi les meilleurs de ma classe, et je m’investis pleinement dans des associations telles que la Communauté des femmes de l’ENSAE de Dakar où nous encourageons l’esprit intellectuel féminin.
+
+\vspace{0.3cm}
+
+Je reste à votre disposition dans l’attente d’un prochain entretien et je vous prie, Madame, Monsieur, d’agréer mes salutations distinguées.
+
+\vspace{1cm}
+
+Leslye Patricia NKWA TSAMO
