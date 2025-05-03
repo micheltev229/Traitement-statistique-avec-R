@@ -1,0 +1,45 @@
+---
+title: 
+author: 
+output:
+  pdf_document:
+    toc: false
+    number_sections: false
+geometry: margin=2.5cm
+fontsize: 11pt
+---
+
+# Informations personnelles
+
+**Nom :** CHEIKH AHMADOU BAMBA FALL  
+**Adresse :** Colobane, Dakar  
+**Téléphone :** (+221) 77 475 82 33  
+**Email :** bambafall02022@gmail.com 
+
+---
+
+# Objectif professionnel
+
+demande de stage d'immersion de 6 semaines pour mettre en pratique mes compétences en statistique appliquée et en économie.
+
+---
+
+# Formation
+
+- **Depuis 2023** – ENSAE Dakar — Eleve Ingénieur Statisticien Économiste (ISE)  
+- **2020 - 2023** – Formation au Lycee Scientifique d'Eexcellence de Diourbel
+
+---
+
+# Compétences
+
+- **Statistique :** régressions, tests, analyse de données  
+- **Économie :** microéconomie, macroéconomie, économie du développement  
+- **Programmation :** R, Python, Excel, Stata, C, QGIS
+- **Langues :** français (courant), anglais (intermédiaire)  
+
+
+ 
+
+
+
