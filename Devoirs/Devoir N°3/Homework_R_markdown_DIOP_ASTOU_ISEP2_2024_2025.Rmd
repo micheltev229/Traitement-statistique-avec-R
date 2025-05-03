@@ -1,0 +1,150 @@
+---
+title: "Devoir R Markdown"
+author: "Astou DIOP"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## 💌 Lettre de motivation
+
+Madame, Monsieur,
+Actuellement étudiante en deuxième année à l’École Nationale de la Statistique et de l’Analyse Économique (ENSAE) de Dakar, je vous écris pour exprimer mon vif intérêt à rejoindre votre équipe. Au cours de ma formation, j'ai acquis des compétences solides en analyse de données, en statistiques et en économie, que je souhaite mettre à profit dans un environnement stimulant comme le vôtre.
+
+Passionnée par l'analyse des données et les défis intellectuels qu'ils représentent, je suis une personne sérieuse, rigoureuse et toujours motivée à apprendre de nouvelles techniques et approches. Mon parcours académique et mes projets réalisés m'ont permis de développer des compétences techniques, mais également des qualités humaines telles que l'autonomie, la gestion du temps et la capacité à travailler en équipe.
+
+Je suis convaincue que votre structure, de par son expertise et ses projets innovants, représente un cadre idéal pour renforcer mes compétences et contribuer activement à vos objectifs. Je serais honorée de pouvoir participer à vos projets et de mettre mon énergie et mes compétences au service de votre équipe.
+
+Je vous prie de bien vouloir recevoir, Madame, Monsieur, l’expression de mes salutations distinguées.
+
+
+
+## 👩🏽‍💼 CV
+
+### Nom :  
+Astou DIOP
+
+### Formation :
+- Étudiante en statistique à l’ENSAE Dakar  
+- Ancienne élève du Lycée scientifique de Diourbel
+
+### Compétences :
+- R, Excel, Enquêtes, Analyse de données, Machine learning,...
+
+
+
+# 📘 Découverte des options de chunks dans R Markdown
+
+Ce document vous aide à comprendre **les options de chunks** dans R Markdown. Un chunk est un bloc de code R que l'on peut insérer dans un document.
+
+---
+
+## 🔹 Syntaxe générale d’un chunk
+
+Un chunk commence ainsi :
+
+
+{r nom_du_chunk, option1=valeur1, option2=valeur2}
+
+---
+
+## 🔸 echo = TRUE ou FALSE
+
+- `echo = TRUE` : le **code R** est affiché dans le document
+- `echo = FALSE` : seul le **résultat** est affiché, pas le code
+
+```{r echo-vrai, echo=TRUE}
+# Le code et le résultat seront affichés
+x <- 5
+x * 2
+```
+
+```{r echo-faux, echo=FALSE}
+# Seul le résultat s'affichera (pas ce code)
+y <- 10
+y + 3
+```
+
+---
+
+## 🔸 include = FALSE
+
+- `include = FALSE` : ni le code ni le résultat ne sont affichés
+- Ce chunk sert souvent à faire des préparations invisibles
+
+```{r invisible, include=FALSE}
+z <- 42  # Création d'une variable sans l'afficher
+```
+
+---
+
+## 🔸 message = FALSE
+
+- Quand un code affiche des **messages**, on peut les masquer
+
+```{r message-exemple, message=FALSE}
+# library() affiche parfois des messages, qu'on peut cacher
+library(ggplot2)
+```
+
+---
+
+## 🔸 warning = FALSE
+
+- R peut générer des **warnings** (avertissements)
+- `warning = FALSE` les masque dans le document
+
+```{r warning-exemple, warning=FALSE}
+log(-1)  # Cela provoque un warning (résultat NaN)
+```
+
+---
+
+## 🔸 error = TRUE
+
+- `error = TRUE` permet **d'afficher les erreurs dans le document**
+- Utile pour l'apprentissage, pour voir les messages d'erreur
+
+```{r erreur-exemple, error=TRUE}
+# Erreur volontaire : on essaie de faire le log d'un texte
+log("bonjour")
+```
+
+---
+
+## 🔸 results = "hide"
+
+- `results = "hide"` : n'affiche **pas les résultats** du code
+
+```{r cacher-resultats, results='hide'}
+2 + 2
+3 + 3
+```
+
+---
+
+## 🔸 fig.show = "hide"
+
+- Si un chunk contient un **graphe**, on peut choisir de ne pas l'afficher
+
+```{r cacher-graphique, fig.show='hide'}
+plot(1:10)
+```
+
+---
+
+## ✅ Résumé des options utiles
+
+|Option             |Fonction                                                        |
+|-------------------|----------------------------------------------------------------|
+| `echo=FALSE`      |Cacher le code                                                  |
+| `include=FALSE`   |Cacher le code ET le résultat                                   |
+| `message=FALSE`   |Masquer les messages                                            |
+| `warning=FALSE`   |Masquer les warnings                                            |
+| `error=TRUE`      |Afficher les erreurs dans le document                           |
+| `results="hide"`  |Cacher les résultats R                                          |
+| `fig.show="hide"` |Cacher les graphiques                                           |
+
