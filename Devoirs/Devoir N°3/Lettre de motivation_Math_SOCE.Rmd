@@ -1,0 +1,34 @@
+---
+title: "Lettre de motivation"
+author: "Math SOCE"
+date: "02/05/2025"
+output: word_document
+---
+
+Dakar, le 02/05/2025 
+
+**Objet : Candidature au poste d’Actuaire Junior en actuariat**  
+
+Monsieur,  
+
+Étudiant à l’École Nationale de la Statistique et de l’Analyse Économique (ENSAE) de Dakar, je vous adresse ma candidature pour un poste dans le domaine de **l’actuariat**, en particulier en tant qu’**actuaire junior**.
+
+Ma formation m’a permis d’acquérir de solides compétences en statistique, probabilités, modélisation stochastique et programmation (R, Python), essentielles dans les domaines de l’assurance, de la prévoyance et de la gestion des risques. J’ai participé à divers projets d’analyse de données, dont certains portaient sur la prévision et l’évaluation des performances, en m’appuyant sur des méthodes rigoureuses et des outils adaptés.
+
+Passionné par les problématiques liées à la **gestion des risques, la tarification et la prévision**, je m'intéresse particulièrement aux applications de l'analyse quantitative dans les secteurs de l’assurance-vie, de la santé et de la retraite. Je suis motivé à l’idée de contribuer à des études actuarielles innovantes et de développer des modèles d’évaluation performants dans un environnement dynamique comme le vôtre.
+
+Je suis reconnu pour ma rigueur, ma capacité d’analyse et ma volonté d’apprendre. Intégrer votre équipe me permettrait de mettre en pratique mes acquis tout en élargissant mes compétences dans un cadre professionnel exigeant.
+
+Je me tiens à votre disposition pour un entretien afin de discuter plus en détail de ma motivation et de mes compétences. Vous trouverez ci-joint mon CV.
+
+Je vous prie d’agréer, Madame, Monsieur, l’expression de mes salutations distinguées.
+
+---
+
+## Coordonnées
+
+**Math SOCE**  
+Téléphone : +221 77 761 61 48  
+Email : socemath5@gmail.com  
+LinkedIn : [linkedin.com/in/mathsoce](https://linkedin.com/in/mathsoce)  
+Adresse : Dakar, Sénégal
