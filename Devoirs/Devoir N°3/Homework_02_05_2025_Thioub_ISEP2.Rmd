@@ -1,0 +1,99 @@
+# ---
+# title: "Homework_02_05_2025_ISEP2_Thioub"
+# author: "Cheikh Thioub"
+# date: "2025-05-03"
+# output: pdf_document
+# ---
+
+# ==============================================================================
+# 1. INITIALISATION
+# ===========# Charger dplyr au début du script
+if (!require("dplyr")) {
+  install.packages("dplyr")
+  library(dplyr)
+}
+
+if (!require("knitr")) {
+  install.packages("knitr")
+  library(knitr)
+}
+
+options(warn = -1)  # Désactivation temporaire des warnings
+set.seed(123)       # Reproductibilité
+
+# ==============================================================================
+# 2. CONTENU PRINCIPAL
+# ==============================================================================
+
+# ----- 2.1 Lettre de motivation -----
+cat("\\section*{Lettre de motivation}\n\n")
+cat("Madame, Monsieur,\n\n")
+cat("Étudiant en Master 2 de Statistique à l'ENSAE Dakar, je vous propose ma candidature.\n")
+cat("Mes compétences en analyse de données et mon expérience chez SONATEL (2024)\n")
+cat("me permettent d'envisager une intégration rapide au sein de votre équipe.\n\n")
+cat("Veuillez agréer, Madame, Monsieur, mes salutations distinguées.\n\n")
+cat("\\textbf{Cheikh Thioub}\n\n")
+
+# ----- 2.2 Profil professionnel -----
+cat("\\section*{Profil professionnel}\n\n")
+cat("\\textbf{Formation}\n")
+cat("- ENSAE Dakar : Master en Statistique Appliquée (2023-2025)\n")
+cat("- Certifications : Data Science (Coursera), Analyse Spatiale (ESRI)\n\n")
+
+cat("\\textbf{Compétences techniques}\n")
+cat("- Langages : R, Python, SQL\n")
+cat("- Outils : RStudio, Git, Power BI, LaTeX\n")
+cat("- Méthodes : Machine Learning, Data Mining\n\n")
+
+# ----- 2.3 Démonstration technique -----
+cat("\\section{Démonstration technique}\n\n")
+
+# Gestion d'erreur
+cat("\\subsection{Gestion des erreurs}\n")
+tryCatch({
+  log("text")  # Génère une erreur
+}, error = function(e) {
+  cat("\\textbf{Erreur contrôlée} :", e$message, "\n\n")
+})
+
+# Tableau de données
+cat("\\subsection{Manipulation de données}\n")
+donnees <- data.frame(
+  ID = 1:5,
+  Valeur = c(23, 45, 12, 67, 34),
+  Statut = c("A", "B", "A", "C", "B")
+)
+
+# Affichage du tableau avec pipe
+cat("\n")
+knitr::kable(donnees, 
+            format = "simple",
+            caption = "Exemple de jeu de données") %>%
+  print()
+
+# Graphique (caché)
+cat("\\subsection{Visualisation}\n")
+pdf(file = NULL)
+plot(donnees$ID, donnees$Valeur, 
+     type = "b", col = "blue",
+     main = "Évolution des valeurs",
+     xlab = "ID", ylab = "Valeur")
+invisible(dev.off())
+cat("\\textit{Graphique généré mais non affiché}\n\n")
+
+# ==============================================================================
+# 3. CONCLUSION
+# ==============================================================================
+cat("\\section{Conclusion}\n")
+cat("Ce document démontre :\n")
+cat("\\begin{itemize}\n")
+cat("\\item La production de documents avec R\n")
+cat("\\item La gestion professionnelle des erreurs\n")
+cat("\\item La création de tableaux et graphiques\n")
+cat("\\end{itemize}\n")
+
+# ==============================================================================
+# NETTOYAGE
+# ==============================================================================
+rm(list = ls())
+options(warn = 0)
