@@ -1,0 +1,69 @@
+---
+title: "Curriculum Vitae"
+author: "Math SOCE"
+date: "03/05/2025"
+output: word_document
+---
+
+# **INFORMATIONS PERSONNELLES**
+
+- **Nom :** Math SOCE 
+- **Téléphone :** +221 77 761 61 48  
+- **Email :** socemath5@gmail.com  
+- **Adresse :** Dakar, Sénégal  
+- **LinkedIn :** [linkedin.com/in/mathsoce](https://linkedin.com/in/mathsoce)
+
+---
+
+# **PROFIL**
+
+Étudiant en statistique à l’ENSAE de Dakar, admis par concours après un parcours d’excellence au lycée scientifique de Diourbel. Curieux, rigoureux et passionné par l’analyse des données, l’économie appliquée et la recherche quantitative.
+
+---
+
+# **COMPÉTENCES**
+
+- **Statistiques et Data Science :** R, Python, Excel  
+- **Visualisation :** ggplot2, plotly, Excel  
+- **Bases de données :** SQL  
+- **Rédaction :** R Markdown, Word  
+- **Langues :** Français (courant), Anglais (niveau moyen)
+
+---
+
+# **FORMATION**
+
+### **École Nationale de la Statistique et de l’Analyse Économique (ENSAE) – Dakar**  
+*2023 – présent*  
+Formation en statistique, économie appliquée et science des données. Admis par concours national sélectif.
+
+### **Lycée Scientifique d’Excellence de Diourbel**  
+*2020 – 2023*  
+Entré sur concours. Baccalauréat scientifique (Série S1) obtenu en 2023 avec mention bien.  
+Environnement d’apprentissage exigeant, axé sur les sciences fondamentales et l’excellence académique.
+
+---
+
+# **EXPÉRIENCE & PROJETS ACADÉMIQUES**
+
+### **Projet – Analyse des données agricoles africaines (ENSAE)**  
+*2025*  
+- Nettoyage de bases agricoles  
+- Calcul d’indicateurs : rendement, diversité, autoconsommation  
+- Régression pondérée sous R, rédaction d’un rapport technique
+
+### **Projet – Bien-être des ménages au Sénégal (EHCVM)**  
+*2024*  
+- Analyse exploratoire sous R  
+- Comparaison des ménages pauvres / non pauvres  
+- Utilisation de tableaux croisés, histogrammes pondérés, indices de pauvreté
+
+---
+
+# **CENTRES D’INTÉRÊT**
+
+- Statistique publique, agriculture, éducation  
+- Lecture, rédaction, sport, musique
+
+---
+

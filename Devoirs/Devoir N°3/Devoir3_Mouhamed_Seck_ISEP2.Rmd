@@ -1,0 +1,137 @@
+---
+title: "CV et Lettre de Motivation - Mouhamet Seck"
+output:
+  word_document:
+    toc: false
+  html_document:
+    toc: false
+  pdf_document:
+    latex_engine: xelatex
+    geometry: left=2cm,right=2cm,top=2cm,bottom=2cm
+date: "2025-05-02"
+---
+
+```{r setup, include=FALSE}
+# Configuration globale
+knitr::opts_chunk$set(
+  echo = FALSE,
+  warning = FALSE,
+  message = FALSE,
+  fig.align = "center",
+  fig.pos = "H"
+)
+```
+
+```{r libraries, include=FALSE}
+library(ggplot2)
+library(kableExtra)
+```
+
+# Curriculum Vitae
+
+## Informations personnelles
+
+```{r infos_perso, results='asis'}
+cat("**Nom :** Mouhamet Seck  \n")
+cat("**Nationalité :** Sénégalaise  \n")
+cat("**Adresse :** Niarry Tally, Dakar, Sénégal  \n")
+cat("**Téléphone :** (+221) 77 456 87 35  \n")
+cat("**Email :** [seckmohamed25@gmail.com](mailto:seckmohamed25@gmail.com)  \n")
+```
+
+## Objectif
+
+Étudiant en 2ème année préparatoire d'Ingénierie Statistique et Économique à l'ENSAE Dakar, je recherche un stage dans le domaine de l'analyse de données pour appliquer mes compétences en statistique.
+
+## Formation
+
+```{r formation}
+formations <- data.frame(
+  Période = c("2024-2025", "2023-2024", "2022-2023"),
+  Diplôme = c(
+    "Deuxième année préparatoire d'Ingénieur Statisticien Économiste",
+    "Première année préparatoire d'Ingénieur Statisticien Économiste",
+    "Baccalauréat Série Scientifique (S1)"
+  ),
+  Établissement = c(
+    "École Nationale de la Statistique et de l'Analyse Économique (ENSAE), Dakar",
+    "ENSAE, Dakar",
+    "Lycée Seydida Limamou Laye, Guédiawaye"
+  )
+)
+
+kable(formations, "latex", booktabs = TRUE, align = c("l", "l", "l")) %>%
+  kable_styling(latex_options = c("striped", "hold_position"))
+```
+
+## Compétences
+
+```{r competences, results='asis'}
+cat("### Techniques\n")
+cat("- Analyse statistique univariée/bivariée\n")
+cat("- Visualisation de données (Excel, Python)\n\n")
+
+cat("### Informatique\n")
+cat("- **Logiciels :** SPSS, STATA, QGIS\n")
+cat("- **Programmation :** Python, VBA\n\n")
+
+cat("### Langues\n")
+cat("- Français (langue maternelle)\n")
+cat("- Anglais (intermédiaire)\n")
+```
+
+```{r skills_plot, fig.cap="Répartition des compétences techniques", out.width="80%"}
+skills_data <- data.frame(
+  Compétence = c("Python", "SPSS", "STATA", "QGIS", "Excel", "VBA"),
+  Niveau = c(8, 7, 6, 5, 9, 6)
+)
+
+ggplot(skills_data, aes(x = reorder(Compétence, Niveau), y = Niveau, fill = Compétence)) +
+  geom_col(width = 0.7) +
+  scale_fill_brewer(palette = "Blues") +
+  coord_flip() +
+  labs(x = "", y = "Niveau (1-10)") +
+  theme_minimal(base_size = 11) +
+  theme(legend.position = "none",
+        panel.grid.major.y = element_blank())
+```
+
+## Centres d'intérêt
+
+-   Lecture (littérature, biographies)
+-   Sport (pratique régulière)
+
+\newpage
+
+# Lettre de motivation
+
+```{r lettre_motivation, results='asis'}
+cat('**À l\\textquotesingle attention de Monsieur/Madame le Directeur**  \n')
+cat('**Afristat**  \n')
+cat('Bamako, Mali  \n')
+cat('Dakar, le ', format(Sys.Date(), "%d/%m/%Y"), '  \n\n')
+
+cat('**Objet :** Candidature pour un stage en analyse statistique  \n\n')
+
+cat('Madame, Monsieur,  \n\n')
+
+cat('Actuellement en deuxième année de formation d\\textquotesingle Ingénieur Statisticien Économiste à l\\textquotesingle ENSAE Dakar, je me permets de vous proposer ma candidature pour un stage de deux mois au sein de votre structure. Ce stage, prévu du 01/07/2025 au 01/09/2025, s\\textquotesingle inscrit dans le cadre de ma formation et me permettrait de perfectionner mes compétences en analyse de données.  \n\n')
+
+cat('Votre agence, reconnue pour son expertise en analyse de données, représente pour moi l\\textquotesingle opportunité idéale d\\textquotesingle appliquer mes connaissances en statistique, tout en contribuant à vos projets d\\textquotesingle envergure. Doté d\\textquotesingle une solide formation en outils statistiques, je saurai apporter rigueur analytique et créativité dans le traitement des données.  \n\n')
+
+cat('Motivé par les défis techniques et convaincu que ce stage serait mutuellement bénéfique, je reste à votre disposition pour un entretien afin de vous exposer plus en détail comment mes compétences pourraient servir vos objectifs.  \n\n')
+
+cat('Dans l\\textquotesingle attente de votre retour, je vous prie d\\textquotesingle agréer, Madame, Monsieur, l\\textquotesingle expression de mes salutations distinguées.  \n\n')
+
+cat('**Signature**  \n\n')
+cat('**Mouhamet Seck**  \n')
+cat('(+221) 77 456 87 35  \n')
+cat('[seckmouhamet125@gmail.com](mailto:seckmouhamet125@gmail.com)  \n')
+```
+
+```{r include=FALSE}
+# Vérification finale
+if(!grepl("\\[.*\\]\\(mailto:.*\\)", knitr::current_input())) {
+  warning("Vérifiez le format des emails !")
+}
+```

@@ -1,0 +1,76 @@
+---
+output:
+  pdf_document:
+    latex_engine: xelatex
+mainfont: Times New Roman
+geometry: margin=1in
+fontsize: 11pt
+---
+
+# Coordonnées
+
+- Téléphone : +221 77 885 65 66  
+- Email : leslyenkwa@gmail.com  
+- LinkedIn : https://www.linkedin.com/in/leslyenkwatp  
+- GitHub : https://https//github.com/Deep5Mind
+
+# PROFIL
+
+Actuellement étudiante en deuxième année de formation en ingénierie statistique et en analyse économique, je mets mes connaissances et compétences en analyse univariée et bivariée des données au service de divers projets.  
+J’accorde un intérêt particulier aux travaux de challenge à portée économique, sociale et humanitaire.
+
+# ÉDUCATION
+
+**ENSAE-Dakar**  
+Élève ingénieure statisticienne économiste  
+Octobre 2023 – Aujourd’hui, Sénégal
+
+**Université de Douala**  
+Bac+2 en Science Mathématique  
+Septembre 2021 – Août 2023, Cameroun
+
+# CERTIFICATIONS
+
+- Introduction to Prompt Engineering for Generative AI, LinkedIn – Dakar, Février 2025  
+- Découvrir l’IA générative, LinkedIn – Dakar, Février 2025  
+- Time Series Analysis, KAGGLE – Dakar, Septembre 2024  
+- Collecte de données, Association Emploi D’Abord – Cameroun, Septembre 2023  
+
+# PROJETS ACADÉMIQUES
+
+- **A.E.D | Analyse exploratoire des données issues de l’E.H.C.V.M du Sénégal 2018**  
+  - Profilage des ménages pauvres  
+  - Utilisation d’Excel, rédaction de rapport d’enquête avec Word et Design sous Canva
+
+- **Projet structuré sur Python | Analyse de données collectées**  
+  - Filtrage et tri des données  
+  - Analyse et Visualisation des données
+
+# COMPÉTENCES TECHNIQUES
+
+- Traitement de données : Python (pandas, numpy, matplotlib), Excel  
+- Logiciels statistiques : STATA, SPSS, QGIS  
+- Logiciels de collecte de données : Kobo Collect, Google Form  
+- Outils Microsoft : Word, Excel, VBA Excel, PowerPoint, Google Doc, Google Sheets  
+- Graphisme et Présentation : Canva, Gamma, Slidesgo, PowerPoint, Prezi
+
+# SOFT SKILLS
+
+- Esprit créatif, d’analyse et de synthèse
+- Sens de l’organisation et souci du détail
+- Capacité à travailler aussi bien de manière autonome que collective
+- Excellente communication écrite et orale
+
+# ACTIVITÉS ASSOCIATIVES
+
+- ENSAE Bureau des Statistiques (Secrétaire générale)
+- Afrothèque - La balade des mots (Membre du club de poésie)
+- Conception d’un LOGO pour le RAED (Vainqueur du concours)
+
+# CENTRES D’INTÉRÊT
+
+- Émancipation des jeunes
+- Égalité et équité
+- Entrepreneuriat
+- Questions de développement économique et social
+- Création de contenu éducatif et professionnel
